@@ -995,7 +995,7 @@ end= likelyPlaceLatLngs[which];
                     .withListener(this)
                     .alternativeRoutes(true)
                     .waypoints(Start, End)
-                    .key("AIzaSyAtGvH7Ml5t3PwKokq64OXAyUpO4CFAytE")  //you see here you put your api key
+                    .key( )  //dont forget to put your google api key here and in the google_map_api.xml in the res folder before runing 
                     .build();
             routing.execute();
 
