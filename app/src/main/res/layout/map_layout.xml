@@ -1,0 +1,86 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        style="@style/MaterialSearchBarLight"
+        app:mt_speechMode="false"
+        app:mt_hint="Search a place"
+        app:mt_maxSuggestionsCount="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchBar"
+        android:layout_margin="16dp"
+        app:mt_navIconEnabled="true"
+        android:elevation="5dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:outlineProvider="bounds"
+        app:mt_placeholder="Search a place"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+android:layout_marginTop="80dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:textColor="#FFFFFF"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="show points of interest"
+        android:layout_marginStart="40dp"
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="save location"
+        android:id="@+id/save_loc"
+        android:textColor="#FFFFFF"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:layout_marginTop="80dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginStart="220dp"
+        />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+<include layout="@layout/bottom_sheet"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_directions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_smlarge"
+        android:clickable="true"
+        android:tint="@android:color/white"
+        app:fabSize="normal"
+        app:layout_anchor="@id/bottom_sheet"
+        app:layout_anchorGravity="top|end"
+        app:rippleColor="@android:color/white"
+        app:srcCompat="@drawable/ic_pin_drop"
+        android:focusable="true" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_smlarge"
+
+        android:clickable="true"
+        android:tint="@android:color/white"
+        app:fabSize="normal"
+        app:layout_anchor="@id/bottom_sheet"
+        app:layout_anchorGravity="center_horizontal"
+        app:rippleColor="@android:color/white"
+        app:srcCompat="@drawable/ic_baseline_directions_24"
+        android:focusable="true" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

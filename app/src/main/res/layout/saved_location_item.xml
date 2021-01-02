@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardview"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+
+    app:cardCornerRadius="3dp"
+    app:cardElevation="2dp"
+    android:layout_marginBottom="5dp"
+       xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/non_expandable_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/list_image" />
+
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Weight Logged(Kg):"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"  />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Monday"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                app:layout_constraintStart_toStartOf="@+id/day"
+                app:layout_constraintTop_toBottomOf="@+id/day" />
+
+
+
+            <Button
+                android:id="@+id/action_button_1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="View on Map"
+                android:textSize="15sp"
+                android:textAppearance="
+            @style/TextAppearance.MaterialComponents.Headline6"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                app:layout_constraintStart_toStartOf="@+id/tv_date"
+                app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+            <Button
+                android:id="@+id/action_button_2"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:text="Delete"
+                android:textSize="15sp"
+                android:layout_marginTop="16dp"
+
+                android:textAppearance="
+            @style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toEndOf="@+id/action_button_1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>

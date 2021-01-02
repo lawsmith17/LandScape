@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_primary"
+            android:icon="@drawable/check_out"
+            android:title="Check out"
+            app:actionLayout="@layout/menu_counter_layout" />
+
+
+    </group>
+
+
+
+    <group
+        android:id="@+id/menu_bottom_group">
+        <item
+            android:id="@+id/menu_logout"
+            android:icon="@drawable/cake"
+            android:title="Logout" />
+
+    </group>
+</menu>
